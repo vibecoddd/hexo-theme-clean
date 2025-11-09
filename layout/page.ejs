@@ -1,0 +1,36 @@
+<!-- Page Header -->
+<header class="masthead" <%
+var bgImg = page.header_img;
+if (!bgImg && page.title && theme.page_backgrounds) {
+  var pageType = page.title.toLowerCase();
+  if (theme.page_backgrounds[pageType]) {
+    bgImg = theme.page_backgrounds[pageType];
+  } else if (theme.page_backgrounds.about) {
+    bgImg = theme.page_backgrounds.about;
+  }
+}
+if (!bgImg) bgImg = theme.header_img;
+%><% if (bgImg) { %>style="background-image: url('<%= url_for(bgImg) %>')"<% } %>>
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="page-heading">
+          <h1><%= page.title %></h1>
+          <% if (page.subtitle) { %>
+            <span class="subheading"><%= page.subtitle %></span>
+          <% } %>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Main Content -->
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-md-10 mx-auto">
+      <%- page.content %>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,56 @@
+<!-- Page Header -->
+<header class="masthead" <% if (theme.page_backgrounds && theme.page_backgrounds.post) { %>style="background-image: url('<%= url_for(theme.page_backgrounds.post) %>')"<% } else if (theme.header_img) { %>style="background-image: url('<%= url_for(theme.header_img) %>')"<% } %>>
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="page-heading">
+          <h1>Posts</h1>
+          <span class="subheading">All blog posts</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Main Content -->
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-md-10 mx-auto">
+
+      <% if (site.posts && site.posts.data) { %>
+        <% site.posts.each(function(post) { %>
+          <div class="post-preview">
+            <a href="<%= url_for(post.path) %>">
+              <h2 class="post-title">
+                <%= post.title %>
+              </h2>
+              <% if (post.subtitle) { %>
+                <h3 class="post-subtitle">
+                  <%= post.subtitle %>
+                </h3>
+              <% } %>
+            </a>
+            <p class="post-meta">
+              Posted by
+              <% if (post.author) { %>
+                <a href="#"><%= post.author %></a>
+              <% } else { %>
+                <a href="#"><%= theme.author || config.author %></a>
+              <% } %>
+              on <%= date(post.date, 'MMMM DD, YYYY') %>
+              <% if (post.content) { %>
+                • <%= Math.ceil(strip_html(post.content).length / 250) %> min read
+              <% } %>
+            </p>
+          </div>
+          <hr>
+        <% }) %>
+      <% } %>
+
+      <!-- Pagination -->
+      <%- partial('_partial/pagination') %>
+
+    </div>
+  </div>
+</div>

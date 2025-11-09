@@ -1,0 +1,35 @@
+# 简体中文语言文件 - Clean Blog 主题
+
+nav:
+  home: 首页
+  about: 关于
+  posts: 文章
+  archives: 归档
+  contact: 联系
+
+page:
+  read_more: "阅读更多"
+  older_posts: "更早的文章"
+  newer_posts: "更新的文章"
+  posted_by: "发表于"
+  on: ""
+  min_read: "分钟阅读"
+
+contact:
+  title: "联系我"
+  subtitle: "有问题吗？我来回答。"
+  name: "姓名"
+  email: "邮箱地址"
+  phone: "电话号码"
+  message: "消息"
+  send: "发送"
+  success: "您的消息已发送。"
+  error: "抱歉，邮件服务器似乎没有响应。请稍后再试！"
+
+footer:
+  copyright: "版权所有"
+
+meta:
+  posts: "文章"
+  archives: "归档"
+  page_title_separator: " | "

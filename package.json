@@ -1,0 +1,30 @@
+{
+  "name": "hexo-theme-clean",
+  "version": "1.1.0",
+  "description": "A clean, beautiful blog theme for Hexo based on the Clean Blog Jekyll theme",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/hexo-theme-clean.git"
+  },
+  "keywords": [
+    "hexo",
+    "theme",
+    "blog",
+    "clean",
+    "bootstrap",
+    "responsive"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/your-username/hexo-theme-clean/issues"
+  },
+  "homepage": "https://github.com/your-username/hexo-theme-clean#readme",
+  "devDependencies": {
+    "hexo": "^6.0.0"
+  },
+  "peerDependencies": {
+    "hexo": "^6.0.0"
+  }
+}

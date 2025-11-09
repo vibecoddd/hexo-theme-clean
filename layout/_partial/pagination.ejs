@@ -1,0 +1,11 @@
+<% if (page.total > 1) { %>
+  <!-- Pager -->
+  <div class="clearfix">
+    <% if (page.prev) { %>
+      <a class="btn btn-primary float-left" href="<%= url_for(page.prev_link) %>">&larr; Newer Posts</a>
+    <% } %>
+    <% if (page.next) { %>
+      <a class="btn btn-primary float-right" href="<%= url_for(page.next_link) %>">Older Posts &rarr;</a>
+    <% } %>
+  </div>
+<% } %>

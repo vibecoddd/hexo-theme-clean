@@ -1,0 +1,11 @@
+<% if (theme.seo && theme.seo.google_analytics) { %>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=<%= theme.seo.google_analytics %>"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '<%= theme.seo.google_analytics %>');
+</script>
+<% } %>

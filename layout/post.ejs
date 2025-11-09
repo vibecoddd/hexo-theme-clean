@@ -1,0 +1,61 @@
+<!-- Page Header -->
+<header class="masthead" <% if (page.header_img) { %>style="background-image: url('<%= url_for(page.header_img) %>')"<% } else if (theme.page_backgrounds && theme.page_backgrounds.post) { %>style="background-image: url('<%= url_for(theme.page_backgrounds.post) %>')"<% } else if (theme.header_img) { %>style="background-image: url('<%= url_for(theme.header_img) %>')"<% } %>>
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="post-heading">
+          <h1><%= page.title %></h1>
+          <% if (page.subtitle) { %>
+            <h2 class="subheading"><%= page.subtitle %></h2>
+          <% } %>
+          <span class="meta">
+            Posted by
+            <% if (page.author) { %>
+              <a href="#"><%= page.author %></a>
+            <% } else { %>
+              <a href="#"><%= theme.author || config.author %></a>
+            <% } %>
+            on <%= date(page.date, 'MMMM DD, YYYY') %>
+            <% if (page.content) { %>
+              • <%= Math.ceil(strip_html(page.content).length / 250) %> min read
+            <% } %>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <%- page.content %>
+      </div>
+    </div>
+  </div>
+</article>
+
+<hr>
+
+<!-- Post Navigation -->
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-md-10 mx-auto">
+      <ul class="pager">
+        <% if (page.prev) { %>
+          <li class="previous">
+            <a href="<%= url_for(page.prev.path) %>" data-toggle="tooltip" data-placement="top" title="<%= page.prev.title %>">&larr; Previous Post</a>
+          </li>
+        <% } %>
+        <% if (page.next) { %>
+          <li class="next">
+            <a href="<%= url_for(page.next.path) %>" data-toggle="tooltip" data-placement="top" title="<%= page.next.title %>">Next Post &rarr;</a>
+          </li>
+        <% } %>
+      </ul>
+    </div>
+  </div>
+</div>

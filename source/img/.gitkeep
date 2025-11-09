@@ -1,0 +1,17 @@
+# Image assets directory
+# This directory contains the default background images for the theme
+
+# Default background images included:
+# - home-bg.jpg (homepage background) - Beautiful landscape
+# - about-bg.jpg (about page background) - Workspace/notebook scene
+# - post-bg.jpg (post page background) - Writing/keyboard scene
+# - contact-bg.jpg (contact page background) - Communication theme
+
+# Images are sourced from Unsplash and optimized for web
+# Recommended image size: 1900x1200px
+# File format: JPG (optimized for faster loading)
+
+# To customize:
+# 1. Replace these files with your own images
+# 2. Keep the same filenames, or
+# 3. Update the _config.yml file with new paths

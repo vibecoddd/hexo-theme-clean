@@ -1,0 +1,255 @@
+/*
+ * Clean Blog Theme for Hexo
+ * Based on the StartBootstrap Clean Blog theme
+ */
+
+// Import Bootstrap CSS first via CDN in head.ejs
+// This file contains theme-specific overrides and custom styles
+
+// Variables
+$primary-color = #0085A1
+$dark-color = #212529
+$gray-100 = #f8f9fa
+$gray-200 = #e9ecef
+$gray-300 = #dee2e6
+$gray-400 = #ced4da
+$gray-500 = #adb5bd
+$gray-600 = #6c757d
+$gray-700 = #495057
+$gray-800 = #343a40
+$gray-900 = #212529
+
+$font-family-sans = 'Open Sans', 'Helvetica Neue', Arial, sans-serif
+$font-family-serif = 'Lora', 'Times New Roman', serif
+
+// Global styles
+body
+  font-family $font-family-serif
+  font-size 18px
+  color $dark-color
+
+h1, h2, h3, h4, h5, h6
+  font-family $font-family-sans
+  font-weight 800
+
+p
+  line-height 1.7
+  margin 30px 0
+
+  a
+    text-decoration underline
+    color $dark-color
+
+    &:hover
+      color $primary-color
+
+// Typography
+.page-heading, .post-heading, .site-heading
+  h1
+    font-size 50px
+    margin-top 0
+    margin-bottom 35px
+
+  .subheading, .meta
+    font-family $font-family-sans
+    font-size 22px
+    font-weight 300
+    line-height 1.1
+    display block
+    margin 10px 0 0 0
+    color $gray-600
+
+@media only screen and (min-width: 768px)
+  .post-heading h1, .page-heading h1, .site-heading h1
+    font-size 80px
+
+// Navigation
+#mainNav
+  background-color transparent
+  border-bottom 1px solid $gray-200
+  font-family $font-family-sans
+
+  .navbar-brand
+    font-weight 800
+    color $gray-800
+
+  .navbar-toggler
+    font-size 12px
+    font-weight 800
+    padding 13px
+    text-transform uppercase
+    color $gray-800
+
+  .navbar-nav > li.nav-item > a
+    font-size 12px
+    font-weight 800
+    letter-spacing 1px
+    text-transform uppercase
+    color $gray-800
+
+    &:hover
+      color $primary-color
+
+@media only screen and (min-width: 992px)
+  #mainNav
+    background-color transparent
+    border-bottom 1px solid transparent
+
+    .navbar-brand
+      color white
+
+      &:hover
+        color rgba(255, 255, 255, 0.8)
+
+    .navbar-nav > li.nav-item > a
+      color white
+
+      &:hover
+        color rgba(255, 255, 255, 0.8)
+
+#mainNav.is-fixed
+  position fixed
+  top -77px
+  background-color rgba(255, 255, 255, 0.9)
+  border-bottom 1px solid $gray-200
+  transform translateY(77px)
+
+#mainNav.is-visible
+  transform translateY(0)
+
+// Masthead
+.masthead
+  position relative
+  background color $gray-500
+  background no-repeat center center
+  background-attachment scroll
+  background-size cover
+  padding 200px 0 150px
+
+  .overlay
+    position absolute
+    top 0
+    left 0
+    height 100%
+    width 100%
+    background-color $dark-color
+    opacity 0.5
+
+  .page-heading, .post-heading, .site-heading
+    text-align center
+    color white
+
+@media only screen and (min-width: 768px)
+  .masthead
+    padding 200px 0
+
+// Post Preview
+.post-preview
+  a
+    text-decoration none
+    color $dark-color
+
+    &:hover
+      text-decoration none
+      color $primary-color
+
+      .post-title
+        color $primary-color
+
+  .post-title
+    font-size 30px
+    font-weight 700
+    margin-top 30px
+    margin-bottom 10px
+
+  .post-subtitle
+    font-weight 300
+    margin 0 0 10px
+
+  .post-meta
+    font-family $font-family-sans
+    font-size 18px
+    font-style italic
+    margin-top 0
+    color $gray-600
+
+    a
+      text-decoration none
+      color $gray-600
+
+      &:hover
+        color $primary-color
+        text-decoration underline
+
+@media only screen and (min-width: 768px)
+  .post-preview .post-title
+    font-size 36px
+
+// Footer
+footer
+  padding 50px 0 65px
+
+  .list-inline
+    margin 0
+    padding 0
+
+  .copyright
+    font-family $font-family-sans
+    font-size 14px
+    margin-bottom 0
+    text-align center
+
+// Contact Form
+#contactForm .floating-label-form-group
+  border-bottom 1px solid $gray-200
+
+  input, textarea
+    font-size 1.5em
+    position relative
+    z-index 1
+    padding 0
+    resize none
+    border none
+    border-radius 0
+    background none
+    box-shadow none !important
+    font-family $font-family-serif
+
+// Buttons
+.btn
+  font-family $font-family-sans
+  font-size 14px
+  font-weight 800
+  letter-spacing 1px
+  border-radius 0
+  padding 15px 25px
+  text-transform uppercase
+
+.btn-primary
+  background-color $primary-color
+  border-color $primary-color
+
+  &:hover, &:focus, &:active
+    color white
+    background-color darken($primary-color, 7.5%)
+    border-color darken($primary-color, 7.5%)
+
+// Pager
+.pager
+  list-style none
+  padding 0
+  margin 20px 0
+  text-align center
+
+  li
+    display inline
+
+    a, span
+      font-family $font-family-sans
+      font-size 14px
+      font-weight 800
+      letter-spacing 1px
+      padding 15px 25px
+      text-transform uppercase
+      background-color white
+      border-radius 0

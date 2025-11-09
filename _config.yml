@@ -1,0 +1,79 @@
+# Hexo Clean Blog Theme Configuration
+
+# Site Information
+title: "Clean Blog"
+subtitle: "A clean, beautiful blog theme for Hexo"
+description: "A Hexo theme based on the Clean Blog Jekyll theme"
+author: "Your Name"
+email: "your-email@example.com"
+
+# Header Settings
+header_img: "/img/home-bg.jpg"
+
+# Page specific background images
+page_backgrounds:
+  home: "/img/home-bg.jpg"
+  about: "/img/about-bg.jpg"
+  post: "/img/post-bg.jpg"
+  contact: "/img/contact-bg.jpg"
+
+# Navigation Menu
+menu:
+  Home: /
+  About: /about
+  Posts: /archives
+  Contact: /contact
+
+# Social Links
+social:
+  github: ""
+  twitter: ""
+  facebook: ""
+  linkedin: ""
+  instagram: ""
+
+# Contact Form (Formspree)
+contact:
+  enable: true
+  formspree_endpoint: ""  # Your Formspree form endpoint
+
+# Footer Settings
+footer:
+  copyright: true
+  since: 2024
+
+# Theme Settings
+theme_config:
+  # Enable responsive design
+  responsive: true
+
+  # Enable syntax highlighting
+  highlight:
+    enable: true
+    theme: "github"
+
+  # Enable MathJax
+  mathjax:
+    enable: false
+
+  # Enable comment system
+  comments:
+    enable: false
+    provider: ""
+
+# SEO Settings
+seo:
+  google_analytics: ""
+  google_site_verification: ""
+  baidu_analytics: ""
+
+# Advanced Settings
+advanced:
+  # Custom CSS
+  custom_css: ""
+
+  # Custom JS
+  custom_js: ""
+
+  # Favicon
+  favicon: "/img/favicon.ico"

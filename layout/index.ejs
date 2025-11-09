@@ -1,0 +1,61 @@
+<!-- Page Header -->
+<header class="masthead" <% if (theme.page_backgrounds && theme.page_backgrounds.home) { %>style="background-image: url('<%= url_for(theme.page_backgrounds.home) %>')"<% } else if (theme.header_img) { %>style="background-image: url('<%= url_for(theme.header_img) %>')"<% } %>>
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="site-heading">
+          <h1><%= config.title || 'Clean Blog' %></h1>
+          <% if (config.subtitle) { %>
+            <span class="subheading"><%= config.subtitle %></span>
+          <% } %>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Main Content -->
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-md-10 mx-auto">
+
+      <% if (site.posts && site.posts.data) { %>
+        <% var posts = site.posts.limit(5).data %>
+        <% posts.forEach(function(post) { %>
+          <div class="post-preview">
+            <a href="<%= url_for(post.path) %>">
+              <h2 class="post-title">
+                <%= post.title %>
+              </h2>
+              <% if (post.subtitle) { %>
+                <h3 class="post-subtitle">
+                  <%= post.subtitle %>
+                </h3>
+              <% } %>
+            </a>
+            <p class="post-meta">
+              Posted by
+              <% if (post.author) { %>
+                <a href="#"><%= post.author %></a>
+              <% } else { %>
+                <a href="#"><%= theme.author || config.author %></a>
+              <% } %>
+              on <%= date(post.date, 'MMMM DD, YYYY') %>
+              <% if (post.content) { %>
+                • <%= Math.ceil(strip_html(post.content).length / 250) %> min read
+              <% } %>
+            </p>
+          </div>
+          <hr>
+        <% }) %>
+      <% } %>
+
+      <!-- Pager -->
+      <div class="clearfix">
+        <a class="btn btn-primary float-right" href="<%= url_for(config.root + 'archives/') %>">Older Posts &rarr;</a>
+      </div>
+
+    </div>
+  </div>
+</div>

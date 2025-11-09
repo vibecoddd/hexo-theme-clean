@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="<%= config.language || 'en' %>">
+
+<%- partial('_partial/head') %>
+
+<body>
+
+  <%- partial('_partial/navbar') %>
+
+  <%- body %>
+
+  <%- partial('_partial/footer') %>
+
+  <%- partial('_partial/scripts') %>
+
+  <% if (theme.seo && theme.seo.google_analytics) { %>
+    <%- partial('_partial/google-analytics') %>
+  <% } %>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+# English language file for Clean Blog theme
+
+nav:
+  home: Home
+  about: About
+  posts: Posts
+  archives: Archives
+  contact: Contact
+
+page:
+  read_more: "Read More"
+  older_posts: "Older Posts"
+  newer_posts: "Newer Posts"
+  posted_by: "Posted by"
+  on: "on"
+  min_read: "min read"
+
+contact:
+  title: "Contact Me"
+  subtitle: "Have questions? I have answers."
+  name: "Name"
+  email: "Email Address"
+  phone: "Phone Number"
+  message: "Message"
+  send: "Send"
+  success: "Your message has been sent."
+  error: "Sorry, it seems that the mail server is not responding. Please try again later!"
+
+footer:
+  copyright: "Copyright"
+
+meta:
+  posts: "Posts"
+  archives: "Archives"
+  page_title_separator: " | "
