@@ -2,7 +2,7 @@
 
 A beautiful, responsive blog theme for [Hexo](https://hexo.io/), based on the popular [Clean Blog Jekyll theme](https://github.com/lightningspirit/clean-blog-jekyll-theme) by Start Bootstrap.
 
-![Theme Preview](screenshot.png)
+![Theme Preview](source/img/screenshot.png)
 
 ## Features
 
