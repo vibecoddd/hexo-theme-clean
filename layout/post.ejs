@@ -9,16 +9,16 @@
           <% if (page.subtitle) { %>
             <h2 class="subheading"><%= page.subtitle %></h2>
           <% } %>
-          <span class="meta">
+          <span class="post-meta">
             Posted by
             <% if (page.author) { %>
-              <a href="#"><%= page.author %></a>
+              <%= page.author %>
             <% } else { %>
-              <a href="#"><%= theme.author || config.author %></a>
+              <%= theme.author || config.author %>
             <% } %>
             on <%= date(page.date, 'MMMM DD, YYYY') %>
             <% if (page.content) { %>
-              • <%= Math.ceil(strip_html(page.content).length / 250) %> min read
+              · <%= Math.ceil(strip_html(page.content).length / 250) %> min read
             <% } %>
           </span>
         </div>

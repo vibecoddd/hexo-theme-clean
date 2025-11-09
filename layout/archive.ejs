@@ -40,7 +40,7 @@
               <% } %>
               on <%= date(post.date, 'MMMM DD, YYYY') %>
               <% if (post.content) { %>
-                • <%= Math.ceil(strip_html(post.content).length / 250) %> min read
+                · <%= Math.ceil(strip_html(post.content).length / 250) %> min read
               <% } %>
             </p>
           </div>
