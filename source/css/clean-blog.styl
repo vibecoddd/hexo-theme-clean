@@ -284,3 +284,41 @@ article img
   height auto
   display block
   margin 30px auto
+
+// 代码块样式 - 确保不超出宽度，添加浅灰色背景，优化序号与内容区隔
+article pre, article code, article .highlight
+  max-width 100%
+  overflow-x auto  // 允许水平滚动
+  white-space pre-wrap  // 保留空格和换行
+  word-wrap break-word  // 长单词换行
+
+// 代码块容器
+article pre, article .highlight
+  background-color #f6f8fa  // 浅灰色背景
+  border-radius 4px
+  padding 16px
+  margin 30px 0
+  font-family 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace
+  font-size 14px
+
+// 行内代码
+article code
+  background-color #f6f8fa
+  padding 2px 4px
+  border-radius 3px
+  font-size 0.9em
+
+// 代码高亮块中的行号样式优化
+article .highlight .gutter
+  padding-right 12px  // 右侧空格分隔
+  text-align right
+  color #6a737d
+
+// 代码内容区域
+article .highlight .code
+  padding-left 8px  // 左侧空格分隔
+
+// 确保有序列表中的代码块正确显示
+article ol li pre, article ul li pre
+  margin-left 0
+  margin-right 0
